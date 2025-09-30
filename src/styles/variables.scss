@@ -1,0 +1,37 @@
+$border-radius: 30px;
+
+// colors
+$color-white: #ffffff;
+$color-black: #182641;
+$primary-color-extra-dark: #004884;
+$primary-color-dark: #155ba1;
+$primary-color: #0060a4;
+$primary-color-extra-light: #34aae7;
+$primary-color-ligth: #c1dcf7;
+$primary-color-pale: #e2eefa;
+$color-pale-light: #e5eafa;
+$color-gray-extra-ligth: #cfd3d6;
+$color-gray-ligth: #ecedee;
+$text-color: #352f36;
+$color-black: #000000;
+
+:root {
+  --border-radius: #{$border-radius};
+
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+
+  --primary-color-extra-dark: #{$primary-color-extra-dark};
+  --primary-color-dark: #{$primary-color-dark};
+  --primary-color: #{$primary-color};
+  --primary-color-extra-light: #{$primary-color-extra-light};
+  --primary-color-ligth: #{$primary-color-ligth};
+  --primary-color-pale: #{$primary-color-pale};
+
+  --color-gray-extra-ligth: #{$color-gray-extra-ligth};
+  --color-gray-ligth: #{$color-gray-ligth};
+  --color-pale-light: #{$color-pale-light};
+
+  --text-color: #{$text-color};
+  --color-black: #{$color-black};
+}
