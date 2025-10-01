@@ -1,37 +1,50 @@
-$border-radius: 30px;
-
 // colors
-$color-white: #ffffff;
-$color-black: #182641;
-$primary-color-extra-dark: #004884;
-$primary-color-dark: #155ba1;
-$primary-color: #0060a4;
-$primary-color-extra-light: #34aae7;
-$primary-color-ligth: #c1dcf7;
-$primary-color-pale: #e2eefa;
-$color-pale-light: #e5eafa;
-$color-gray-extra-ligth: #cfd3d6;
-$color-gray-ligth: #ecedee;
-$text-color: #352f36;
-$color-black: #000000;
+$primary-color-base: #b4cbe6;
+$primary-color-100: #24292e;
+$primary-color-90: #3c444d;
+$primary-color-80: #5a6673;
+$primary-color-70: #788799;
+$primary-color-60: #96a9c0;
+$primary-color-50: #c1d4ea;
+$primary-color-40: #cddcee;
+$primary-color-30: #dae5f3;
+$primary-color-20: #e6eef7;
+$primary-color-10: #f0f5fa;
+
+$secondary-color-base: #cda6c3;
+$secondary-color-100: #292127;
+$secondary-color-90: #443741;
+$secondary-color-80: #675362;
+$secondary-color-70: #896f82;
+$secondary-color-60: #ab8aa3;
+$secondary-color-50: #d5b5cd;
+$secondary-color-40: #dec4d7;
+$secondary-color-30: #e6d3e1;
+$secondary-color-20: #eee1eb;
+$secondary-color-10: #f5edf3;
 
 :root {
-  --border-radius: #{$border-radius};
+  --primary-color-base: #{primary-color-base};
+  --primary-color-100: #{primary-color-100};
+  --primary-color-90: #{primary-color-90};
+  --primary-color-80: #{primary-color-80};
+  --primary-color-70: #{primary-color-70};
+  --primary-color-60: #{primary-color-60};
+  --primary-color-50: #{primary-color-50};
+  --primary-color-40: #{primary-color-40};
+  --primary-color-30: #{primary-color-30};
+  --primary-color-20: #{primary-color-20};
+  --primary-color-10: #{primary-color-10};
 
-  --color-white: #{$color-white};
-  --color-black: #{$color-black};
-
-  --primary-color-extra-dark: #{$primary-color-extra-dark};
-  --primary-color-dark: #{$primary-color-dark};
-  --primary-color: #{$primary-color};
-  --primary-color-extra-light: #{$primary-color-extra-light};
-  --primary-color-ligth: #{$primary-color-ligth};
-  --primary-color-pale: #{$primary-color-pale};
-
-  --color-gray-extra-ligth: #{$color-gray-extra-ligth};
-  --color-gray-ligth: #{$color-gray-ligth};
-  --color-pale-light: #{$color-pale-light};
-
-  --text-color: #{$text-color};
-  --color-black: #{$color-black};
+  --secondary-color-base: #{secondary-color-base};
+  --secondary-color-100: #{secondary-color-100};
+  --secondary-color-90: #{secondary-color-90};
+  --secondary-color-80: #{secondary-color-80};
+  --secondary-color-70: #{secondary-color-70};
+  --secondary-color-60: #{secondary-color-60};
+  --secondary-color-50: #{secondary-color-50};
+  --secondary-color-40: #{secondary-color-40};
+  --secondary-color-30: #{secondary-color-30};
+  --secondary-color-20: #{secondary-color-20};
+  --secondary-color-10: #{secondary-color-10};
 }
