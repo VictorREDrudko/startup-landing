@@ -27,5 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     --secondary-color-10: #f5edf3;
 
     --primary-color-button: #87a9d0;
+
+    --primary-color-text-grey: #2d2d2d;
   }
 `;
