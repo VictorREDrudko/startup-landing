@@ -1,7 +1,15 @@
 import './App.css';
 
+import { Button } from './components/button/button';
+import { GlobalStyles } from './global-styles';
+
 function App() {
-  return <div>'start'</div>;
+  return (
+    <>
+      <GlobalStyles />
+      <Button text={'запросить встречу'} />
+    </>
+  );
 }
 
 export default App;
