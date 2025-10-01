@@ -13,6 +13,9 @@ export const GlobalStyles = createGlobalStyle`
     --primary-color-30: #dae5f3;
     --primary-color-20: #e6eef7;
     --primary-color-10: #f0f5fa;
+    --primary-color-button: #87a9d0;
+    --primary-color-text-grey: #2d2d2d;
+    --primary-color-super-light-rose: #ebe1e5;
 
     --secondary-color-base: #cda6c3;
     --secondary-color-100: #292127;
@@ -25,9 +28,5 @@ export const GlobalStyles = createGlobalStyle`
     --secondary-color-30: #e6d3e1;
     --secondary-color-20: #eee1eb;
     --secondary-color-10: #f5edf3;
-
-    --primary-color-button: #87a9d0;
-
-    --primary-color-text-grey: #2d2d2d;
   }
 `;
