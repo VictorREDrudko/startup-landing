@@ -1,9 +1,11 @@
 import './App.css';
 
 import { Button } from './components/button';
+import { Link } from './components/link';
 import { H1, H2, H3, Text } from './components/text';
 import { Widget } from './components/widget';
 import { GlobalStyles } from './global-styles';
+
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
         maxWidth="200px"
         fontSize={14}
       />
+      <Link text={'Услуги'} targetId={'services'} />
     </>
   );
 }
