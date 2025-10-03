@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 60px;
+  padding: 0 70px;
 }
 
 @media (max-width: 480px) {
