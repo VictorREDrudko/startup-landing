@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: end;
   height: 70px;
   margin-bottom: 25px;
+  width: 100%;
 `;
 
 export const Content = styled.div`
