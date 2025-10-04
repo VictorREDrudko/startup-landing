@@ -7,7 +7,7 @@ export const Container = styled.div`
   padding: 110px 0 100px 85px;
   position: relative;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   display: flex;
   align-items: center;
   background: var(--primary-color-super-light-beige);
@@ -45,7 +45,7 @@ export const ImageContainer = styled.div`
   height: 100%;
   width: auto;
   max-width: none;
-  border-radius: 10px;
+  /* border-radius: 0 10px; */
   overflow: visible;
   z-index: 1;
 `;

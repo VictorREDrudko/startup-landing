@@ -26,7 +26,7 @@ export const LinksWrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 150px;
+  width: 223px;
   height: auto;
   object-fit: contain;
 `;

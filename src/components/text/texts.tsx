@@ -16,8 +16,8 @@ export interface TextProps {
 }
 
 const GenericText = css<TextProps>`
-  ${p => p.fontWeight && `font-weight: ${p.fontWeight};`}
-  color: ${props => {
+  ${(p) => p.fontWeight && `font-weight: ${p.fontWeight};`}
+  color: ${(props) => {
     if (props.color) {
       // Если color это CSS переменная (начинается с --)
       if (props.color.startsWith('--')) {
@@ -29,64 +29,65 @@ const GenericText = css<TextProps>`
     // Цвет по умолчанию
     return 'var(--primary-color-text-grey)';
   }};
-  user-select: ${props => (props.nonSelect ? 'none' : 'auto')};
-  text-align: ${props => (props.textAlign ? props.textAlign : 'initial')};
-  white-space: ${props => (props.nowrap ? 'nowrap' : 'normal')};
-  line-height: ${props => (props.lineHeight ? `${props.lineHeight}px` : 'normal')};
-  text-transform: ${p => (p.textTransform ? p.textTransform : 'none')};
-  word-break: ${p => (p.wordBreak ? p.wordBreak : 'normal')};
-  overflow: ${p => (p.overflow || 'visible')};
+  user-select: ${(props) => (props.nonSelect ? 'none' : 'auto')};
+  text-align: ${(props) => (props.textAlign ? props.textAlign : 'initial')};
+  white-space: ${(props) => (props.nowrap ? 'nowrap' : 'normal')};
+  line-height: ${(props) => (props.lineHeight ? `${props.lineHeight}px` : 'normal')};
+  text-transform: ${(p) => (p.textTransform ? p.textTransform : 'none')};
+  word-break: ${(p) => (p.wordBreak ? p.wordBreak : 'normal')};
+  overflow: ${(p) => p.overflow || 'visible'};
   word-wrap: break-word;
   margin: 0;
   padding: 0;
-  ${p => p.letterSpacing && `letter-spacing: ${p.letterSpacing}px;`}
+  ${(p) => p.letterSpacing && `letter-spacing: ${p.letterSpacing}px;`}
 
-  ${p => p.withEllipsis ? css`
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  ` : ''}
+  ${(p) =>
+    p.withEllipsis
+      ? css`
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        `
+      : ''}
 `;
-
-// функция для расчета line-height
-function getLineHeight(props: TextProps): string {
-  if (props.lineHeight) {
-    return `${props.lineHeight}px`;
-  }
-  if (props.fontSize) {
-    return `${Math.ceil(props.fontSize * 1.5)}px`;
-  }
-  return '24px';
-}
 
 export const H1 = styled.h1<TextProps>`
   ${GenericText}
+  font-family: 'Playfair Display', serif;
   font-size: 60px;
-  line-height: 75px;
+  line-height: 1.1;
+  font-weight: 400;
 `;
 
 export const H2 = styled.h2<TextProps>`
   ${GenericText}
-  font-size: 52px;
-  line-height: 78px;
+  font-family: 'Playfair Display', serif;
+  font-size: 45px;
+  line-height: 1.1;
+  font-weight: 400;
 `;
 
 export const H3 = styled.h3<TextProps>`
   ${GenericText}
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  line-height: 1.1;
+`;
+
+export const H4 = styled.h3<TextProps>`
+  ${GenericText}
+  font-family: 'Playfair Display', serif;
   font-size: 36px;
-  line-height: 54px;
+  line-height: 1.2;
+  letter-spacing: 0.84px;
 `;
 
-export const H4 = styled.h4<TextProps>`
+export const H5 = styled.h4<TextProps>`
   ${GenericText}
+  font-family: 'Playfair Display', serif;
   font-size: 30px;
-  line-height: 45px;
-`;
-
-export const H5 = styled.h5<TextProps>`
-  ${GenericText}
-  font-size: 22px;
-  line-height: 33px;
+  line-height: 1.2;
+  letter-spacing: 0.84px;
 `;
 
 export const H6 = styled.h6<TextProps>`
@@ -97,12 +98,13 @@ export const H6 = styled.h6<TextProps>`
 
 export const Text = styled.p<TextProps>`
   ${GenericText}
-  font-size: ${props => props.fontSize || 16}px;
-  line-height: ${getLineHeight};
+  font-size: ${(props) => props.fontSize || 16}px;
+  line-height: ${(props) => props.lineHeight || 1.3};
 `;
 
 export const TinyText = styled.p<TextProps>`
   ${GenericText}
-  font-size: 12px;
-  line-height: 18px;
+  font-size: ${(props) => props.fontSize || 14}px;
+  line-height: ${(props) => props.lineHeight || '18px'};
+  letter-spacing: ${(props) => props.letterSpacing || 0.2}px;
 `;
