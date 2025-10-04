@@ -57,6 +57,14 @@ export const H1 = styled.h1<TextProps>`
   font-size: 60px;
   line-height: 1.1;
   font-weight: 400;
+
+  @media (max-width: 1125px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 34px;
+  }
 `;
 
 export const H2 = styled.h2<TextProps>`
@@ -70,7 +78,7 @@ export const H2 = styled.h2<TextProps>`
     font-size: 34px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 490px) {
     font-size: 30px;
     text-align: center;
   }
@@ -103,6 +111,35 @@ export const H6 = styled.h6<TextProps>`
   ${GenericText}
   font-size: 18px;
   line-height: 27px;
+`;
+
+export const BigText = styled.p<TextProps>`
+  ${GenericText}
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 300;
+
+  @media (max-width: 1125px) {
+    font-size: 34px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 26px;
+  }
+`;
+
+export const MainText = styled.p<TextProps>`
+  ${GenericText}
+  font-size: 22px;
+  line-height: 1.1;
+
+  @media (max-width: 1125px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 `;
 
 export const Text = styled.p<TextProps>`
