@@ -71,6 +71,7 @@ export const MyServicesBlock: React.FC = () => {
               fontSize={22}
               lineHeight={1.2}
               padding={'10px 20px'}
+              backgroundColor={'--primary-color-light-rose'}
             />
           </Styled.ServiceHeader>
           <Styled.ServiceContent>
@@ -93,6 +94,7 @@ export const MyServicesBlock: React.FC = () => {
               fontSize={22}
               lineHeight={1.2}
               padding={'10px 20px'}
+              backgroundColor={'--primary-color-light-rose'}
             />
           </Styled.ServiceHeader>
           <Styled.ServiceContent>
@@ -115,6 +117,7 @@ export const MyServicesBlock: React.FC = () => {
               fontSize={22}
               lineHeight={1.2}
               padding={'10px 20px'}
+              backgroundColor={'--primary-color-light-rose'}
             />
           </Styled.ServiceHeader>
           <Styled.ServiceContent>
@@ -137,6 +140,7 @@ export const MyServicesBlock: React.FC = () => {
               fontSize={22}
               lineHeight={1.2}
               padding={'10px 20px'}
+              backgroundColor={'--primary-color-light-rose'}
             />
           </Styled.ServiceHeader>
           <Styled.ServiceContent>
