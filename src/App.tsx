@@ -1,5 +1,3 @@
-import './App.css';
-
 import { AboutMyApproachBlock } from './common/about-my-approach';
 import { ForWhomBlock } from './common/for-whom-block';
 import { Header } from './common/header';
