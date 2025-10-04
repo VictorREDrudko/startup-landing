@@ -3,6 +3,7 @@ import { ForWhomBlock } from './common/for-whom-block';
 import { Header } from './common/header';
 import { MainBlock } from './common/main-block';
 import { QuoteBlock } from './common/quote-block';
+import { WhatAmIDoing } from './common/what-am-I-doing';
 import { GlobalStyles } from './global-styles';
 
 
@@ -15,6 +16,7 @@ function App() {
       <QuoteBlock />
       <AboutMyApproachBlock />
       <ForWhomBlock />
+      <WhatAmIDoing/>
     </>
   );
 }
