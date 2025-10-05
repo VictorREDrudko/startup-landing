@@ -1,6 +1,8 @@
 import { AboutMyApproachBlock } from './common/about-my-approach';
+import { DescriptionBlock } from './common/description-block';
 import { ForWhomBlock } from './common/for-whom-block';
 import { Header } from './common/header';
+import { JobStructureBlock } from './common/job-structure-block';
 import { MainBlock } from './common/main-block';
 import { MyServicesBlock } from './common/my-services-block';
 import { QuoteBlock } from './common/quote-block';
@@ -18,9 +20,11 @@ function App() {
       <QuoteBlock />
       <AboutMyApproachBlock />
       <ForWhomBlock />
-      <WhatAmIDoing/>
-      <MyServicesBlock/>
-      <TrainingBlock/>
+      <WhatAmIDoing />
+      <MyServicesBlock />
+      <TrainingBlock />
+      <JobStructureBlock />
+      <DescriptionBlock />
     </>
   );
 }
