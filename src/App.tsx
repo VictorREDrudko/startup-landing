@@ -15,8 +15,6 @@ import { TrainingBlock } from './common/training-block';
 import { WhatAmIDoing } from './common/what-am-I-doing';
 import { GlobalStyles } from './global-styles';
 
-
-function MainPage() {
 const TITLE1 = 'БИЗНЕС С ЧЕЛОВЕЧЕСКИМ ЛИЦОМ';
 const QUOTE_TEXT1 = 'Когда в центре — не контроль, а смыслы.';
 const QUOTE_TEXT2 = 'И не борьба, а согласованность.';
@@ -25,6 +23,7 @@ const TITLE2 = 'С УВАЖЕНИЕМ К УЖЕ СУЩЕСТВУЮЩЕЙ СИС�
 const QUOTE_TEXT3 = 'Всегда начинается с понимания контекста.';
 const QUOTE_TEXT4 = 'Не «внедрение», а выстраивание вместе с вами.';
 
+function MainPage() {
   return (
     <>
       <Header />
