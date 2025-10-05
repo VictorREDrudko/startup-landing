@@ -88,7 +88,12 @@ export const H3 = styled.h3<TextProps>`
   ${GenericText}
   font-family: 'Playfair Display', serif;
   font-size: 38px;
+  font-weight: 400;
   line-height: 1.1;
+
+  @media (max-width: 780px) {
+    font-size: 34px;
+  }
 `;
 
 export const H4 = styled.h3<TextProps>`
@@ -175,6 +180,17 @@ export const TextForWhom = styled.p<TextProps>`
 
   @media (max-width: 780px) {
     font-size: 20px;
+  }
+`;
+
+export const TextMyIdeaBlock = styled.p<TextProps>`
+  ${GenericText}
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 400;
+
+  @media (max-width: 780px) {
+    font-size: 22px;
   }
 `;
 

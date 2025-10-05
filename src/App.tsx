@@ -5,12 +5,12 @@ import { FormBlock } from './common/form-block';
 import { Header } from './common/header';
 import { JobStructureBlock } from './common/job-structure-block';
 import { MainBlock } from './common/main-block';
+import { MyIdeaBlock } from './common/my-idea-block';
 import { MyServicesBlock } from './common/my-services-block';
 import { QuoteBlock } from './common/quote-block';
 import { TrainingBlock } from './common/training-block';
 import { WhatAmIDoing } from './common/what-am-I-doing';
 import { GlobalStyles } from './global-styles';
-
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
       <TrainingBlock />
       <JobStructureBlock />
       <DescriptionBlock />
+      <MyIdeaBlock />
       <FormBlock />
     </>
   );
