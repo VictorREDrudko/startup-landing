@@ -6,14 +6,14 @@ import telegramIcon from '../../assets/icons/telegram.svg';
 import logo from '../../assets/logo.png';
 import { IconLink } from '../../components/icon-link';
 import { Link } from '../../components/link';
+import { navigateTo } from '../../utils';
 import { Styled } from './styled';
 
 const LINK_TEXT = 'Политика обработки персональных данных';
 
 export const Footer: React.FC = () => {
   const handlePrivacyPolicyClick = () => {
-    // Позже заменить на роутинг
-    window.open('/privacy-policy', '_blank');
+    navigateTo('/privacy-policy', true);
   };
 
   return (
