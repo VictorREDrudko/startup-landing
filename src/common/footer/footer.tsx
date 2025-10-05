@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
             <IconLink 
               icon={telegramIcon} 
               text="telegram"
-              url="https://t.me/CHES7777" 
+              url="https://t.me/****" 
             />
           </Styled.LinksWithTextWrapper>
         </Styled.Links>
