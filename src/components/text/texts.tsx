@@ -84,6 +84,23 @@ export const H2 = styled.h2<TextProps>`
   }
 `;
 
+export const H2QuoteBlock = styled.h2<TextProps>`
+  ${GenericText}
+  font-family: 'Playfair Display', serif;
+  font-size: 45px;
+  line-height: 1.1;
+  font-weight: 400;
+  text-align: center;
+
+  @media (max-width: 780px) {
+    font-size: 34px;
+  }
+
+  @media (max-width: 490px) {
+    font-size: 24px;
+  }
+`;
+
 export const H3 = styled.h3<TextProps>`
   ${GenericText}
   font-family: 'Playfair Display', serif;

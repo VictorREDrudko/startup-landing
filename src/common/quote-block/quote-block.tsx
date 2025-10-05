@@ -1,17 +1,21 @@
-import React from 'react';
-
-import { H2 } from '../../components/text';
+import { H2QuoteBlock } from '../../components/text';
 import { Widget } from '../../components/widget';
 import { Styled } from './styled';
 
-const WIDGET_TEXT = 'БИЗНЕС С ЧЕЛОВЕЧЕСКИМ ЛИЦОМ';
-const QUOTE_TEXT = 'Когда в центре — не контроль, а смыслы. И не борьба, а согласованность.';
+type QuoteBlockData = {
+  title: string;
+  text1: string;
+  text2: string;
+};
 
-export const QuoteBlock: React.FC = () => {
+export const QuoteBlock = ({ title, text1, text2 }: QuoteBlockData) => {
   return (
     <Styled.Container>
-      <Widget text={WIDGET_TEXT} fontSize={22} lineHeight={1.1} />
-      <H2>{QUOTE_TEXT}</H2>
+      <Widget text={title} fontSize={22} lineHeight={1.1} />
+      <div>
+        <H2QuoteBlock>{text1}</H2QuoteBlock>
+        <H2QuoteBlock>{text2}</H2QuoteBlock>
+      </div>
     </Styled.Container>
   );
 };

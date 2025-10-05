@@ -1,5 +1,4 @@
 import { AboutMyApproachBlock } from './common/about-my-approach';
-import { DescriptionBlock } from './common/description-block';
 import { ForWhomBlock } from './common/for-whom-block';
 import { FormBlock } from './common/form-block';
 import { Header } from './common/header';
@@ -12,20 +11,28 @@ import { TrainingBlock } from './common/training-block';
 import { WhatAmIDoing } from './common/what-am-I-doing';
 import { GlobalStyles } from './global-styles';
 
+const TITLE1 = 'БИЗНЕС С ЧЕЛОВЕЧЕСКИМ ЛИЦОМ';
+const QUOTE_TEXT1 = 'Когда в центре — не контроль, а смыслы.';
+const QUOTE_TEXT2 = 'И не борьба, а согласованность.';
+
+const TITLE2 = 'С УВАЖЕНИЕМ К УЖЕ СУЩЕСТВУЮЩЕЙ СИСТЕМЕ';
+const QUOTE_TEXT3 = 'Всегда начинается с понимания контекста.';
+const QUOTE_TEXT4 = 'Не «внедрение», а выстраивание вместе с вами.';
+
 function App() {
   return (
     <>
       <GlobalStyles />
       <Header />
       <MainBlock />
-      <QuoteBlock />
+      <QuoteBlock title={TITLE1} text1={QUOTE_TEXT1} text2={QUOTE_TEXT2} />
       <AboutMyApproachBlock />
       <ForWhomBlock />
       <WhatAmIDoing />
       <MyServicesBlock />
       <TrainingBlock />
       <JobStructureBlock />
-      <DescriptionBlock />
+      <QuoteBlock title={TITLE2} text1={QUOTE_TEXT3} text2={QUOTE_TEXT4} />
       <MyIdeaBlock />
       <FormBlock />
     </>
