@@ -1,6 +1,7 @@
 import { AboutMyApproachBlock } from './common/about-my-approach';
 import { DescriptionBlock } from './common/description-block';
 import { ForWhomBlock } from './common/for-whom-block';
+import { FormBlock } from './common/form-block';
 import { Header } from './common/header';
 import { JobStructureBlock } from './common/job-structure-block';
 import { MainBlock } from './common/main-block';
@@ -25,6 +26,7 @@ function App() {
       <TrainingBlock />
       <JobStructureBlock />
       <DescriptionBlock />
+      <FormBlock />
     </>
   );
 }
