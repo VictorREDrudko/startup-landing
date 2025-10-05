@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '../../components/button';
 import { H2, H4, Text } from '../../components/text';
 import { Widget } from '../../components/widget';
+import { formatTextWithBoldStart } from '../../utils';
 import { Styled } from './styled';
 
 const HEADER_TEXT = 'Мои услуги';
@@ -43,20 +44,6 @@ const SERVICE_GOAL_4 = `Цель: зафиксировать текущую то
   увидеть риски и точки роста.`;
 const SERVICE_EXIT_4 = `На выходе: короткий документ с описанием ситуации и
   предложением следующих шагов.`;
-
-// Функция для форматирования текста с жирным началом
-const formatTextWithBoldStart = (text: string) => {
-  const parts = text.split(':');
-  if (parts.length > 1) {
-    return (
-      <>
-        <span style={{ fontWeight: 700 }}>{parts[0]}:</span>
-        {parts.slice(1).join(':')}
-      </>
-    );
-  }
-  return text;
-};
 
 export const MyServicesBlock: React.FC = () => {
   return (

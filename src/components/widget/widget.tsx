@@ -11,6 +11,7 @@ interface Props {
   maxWidth?: string;
   padding?: string;
   lineHeight?: number;
+  letterSpacing?: number;
 }
 
 export const Widget: React.FC<Props> = ({
@@ -20,6 +21,7 @@ export const Widget: React.FC<Props> = ({
   maxWidth,
   padding,
   lineHeight,
+  letterSpacing,
 }) => {
   return (
     <Styled.WidgetContainer
@@ -27,7 +29,7 @@ export const Widget: React.FC<Props> = ({
       $padding={padding}
       $maxWidth={maxWidth}
     >
-      <Text fontSize={fontSize} lineHeight={lineHeight}>
+      <Text fontSize={fontSize} lineHeight={lineHeight} letterSpacing={letterSpacing}>
         {text}
       </Text>
     </Styled.WidgetContainer>
