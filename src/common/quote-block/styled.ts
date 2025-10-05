@@ -12,6 +12,10 @@ export const Container = styled.div`
   margin: 90px 0;
   box-sizing: border-box;
 
+  @media (max-width: 780px) {
+    margin: 70px 0;
+  }
+
   @media (max-width: 420px) {
     > div {
       padding: 15px 9px;

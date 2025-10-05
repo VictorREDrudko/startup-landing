@@ -12,6 +12,10 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 25px;
   margin-bottom: 120px;
+
+  @media (max-width: 780px) {
+    margin-bottom: 70px;
+  }
 `;
 
 export const ContentWrapper = styled.div`

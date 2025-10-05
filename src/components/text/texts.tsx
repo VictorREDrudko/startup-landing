@@ -107,6 +107,17 @@ export const H5 = styled.h4<TextProps>`
   letter-spacing: 0.84px;
 `;
 
+export const H6Bold = styled.h6<TextProps>`
+  ${GenericText}
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  @media (max-width: 780px) {
+    font-size: 20px;
+  }
+`;
+
 export const H6 = styled.h6<TextProps>`
   ${GenericText}
   font-size: 18px;
@@ -153,6 +164,17 @@ export const MainText = styled.p<TextProps>`
 
   @media (max-width: 480px) {
     font-size: 14px;
+  }
+`;
+
+export const TextForWhom = styled.p<TextProps>`
+  ${GenericText}
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 400;
+
+  @media (max-width: 780px) {
+    font-size: 20px;
   }
 `;
 
