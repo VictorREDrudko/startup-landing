@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
-import { H2 } from '../../components/text';
-
 export const Container = styled.div`
-  max-width: 920px;
+  max-width: 1050px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +9,10 @@ export const Container = styled.div`
   gap: 15px;
   margin: 90px 0;
   box-sizing: border-box;
+
+  > div > p {
+    text-align: center;
+  }
 
   @media (max-width: 780px) {
     margin: 70px 0;
@@ -20,10 +22,6 @@ export const Container = styled.div`
     > div {
       padding: 15px 9px;
     }
-  }
-
-  ${H2} {
-    text-align: center;
   }
 `;
 
