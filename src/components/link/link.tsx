@@ -5,35 +5,33 @@ import { Styled } from './styled';
 
 interface Props {
   text: string;
-  targetId: string; // ID элемента, к которому прокручиваем
+  targetId?: string;
   onClick?: () => void;
+  externalUrl?: string;
 }
 
 export const Link: React.FC<Props> = ({ 
   text,
   targetId,
   onClick,
+  externalUrl,
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      // Плавная прокрутка к элементу
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
-
-    if (onClick) {
+    if (externalUrl) {
+      // Для внешних ссылок - открываем в новой вкладке
+      e.preventDefault();
+      window.open(externalUrl, '_blank', 'noopener,noreferrer');
+    } else if (onClick) {
+      // Для внутренних действий
+      e.preventDefault();
       onClick();
     }
+    // Для якорных ссылок оставляем стандартное поведение
   };
 
   return (
     <Styled.ScrollLink
-      href={`#${targetId}`}
+      href={externalUrl || (targetId ? `#${targetId}` : '#')}
       onClick={handleClick}
     >
       {text}
