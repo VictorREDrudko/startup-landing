@@ -118,9 +118,9 @@ export const TrainingBlock: React.FC = () => {
             padding={'6px 20px'}
             backgroundColor={'--primary-color-super-light-rose'}
           />
-          <Styled.DescriptionCenter>
+          <Styled.DescriptionWithLineBreaks>
             <Text fontSize={18}>{TRAINING_DESCRIPTION_4}</Text>
-          </Styled.DescriptionCenter>
+          </Styled.DescriptionWithLineBreaks>
         </Styled.Training>
       </Styled.TrainingWrapper>
     </Styled.Container>

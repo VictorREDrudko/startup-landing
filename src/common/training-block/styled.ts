@@ -102,6 +102,18 @@ export const DescriptionCenter = styled.div`
   justify-content: center;
 `;
 
+export const DescriptionWithLineBreaks = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  p {
+    white-space: pre-line; /* Сохраняет переносы строк */
+  }
+`;
+
 
 export const Styled = {
   Container,
@@ -110,4 +122,5 @@ export const Styled = {
   Description,
   DescriptionEnd,
   DescriptionCenter,
+  DescriptionWithLineBreaks,
 };
