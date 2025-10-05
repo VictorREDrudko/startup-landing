@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import { H2, Text } from '../../components/text';
+import { FirstText, H2 } from '../../components/text';
 import { Widget } from '../../components/widget';
+import { WidgetAboutMyApproach } from '../../components/widgetAboutMyApproach';
 import { Styled } from './styled';
-
 
 const HEADER_TEXT = 'О моем подходе';
 const FIRST_WIDGET = `Я помогаю собственникам бизнеса и командам выстраивать
@@ -15,62 +15,125 @@ const LAST_WIDGET = `Подход основан на гештальт-мето�
   тех, кто ищет не шаблоны, а живые решения.`;
 
 export const AboutMyApproachBlock: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    // Проверяем при загрузке
+    checkScreenSize();
+
+    // Добавляем слушатель изменения размера
+    window.addEventListener('resize', checkScreenSize);
+
+    // Убираем слушатель при размонтировании
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
   return (
     <Styled.Container>
       <H2>{HEADER_TEXT}</H2>
       <Styled.ContentWrapper>
-        {/* Первый ряд */}
-        <Styled.FirstRow>
-          <Styled.FirstWidgetWrapper>
-            <Widget
-              text={FIRST_WIDGET}
-              fontSize={21}
-              padding={'40px 40px 55px'}
-              maxWidth={'100%'}
-            />
-          </Styled.FirstWidgetWrapper>
-          <Styled.Iryna1 />
-          <Styled.MixWidgetContainer>
-            <Text fontSize={21}>{MIX_WIDGET_TEXT}</Text>
-            <Styled.WidgetWrapper>
-              <Widget
-                text={'а на уважении к опыту, к процессу'}
-                fontSize={21}
-                padding={'10px 15px'}
-                maxWidth={'fit-content'}
-              />
-              <Widget
-                text={'и к реальности бизнеса.'}
-                fontSize={21}
-                padding={'10px 15px'}
-                backgroundColor={'--primary-color-medium-rose'}
-                maxWidth={'fit-content'}
-              />
-            </Styled.WidgetWrapper>
-          </Styled.MixWidgetContainer>
-        </Styled.FirstRow>
-        {/* Второй ряд */}
-        <Styled.SecondRow>
-          <Styled.Image4 />
-          <Styled.SecondWidgetWrapper>
-            <Widget
-              text={SECOND_WIDGET}
-              fontSize={23}
-              padding={'40px 40px 60px'}
-              backgroundColor={'--primary-color-super-light-beige'}
-              maxWidth={'100%'}
-            />
-          </Styled.SecondWidgetWrapper>
-          <Styled.LastWidgetWrapper>
-            <Widget
-              text={LAST_WIDGET}
-              fontSize={22}
-              padding={'38px 40px 35px'}
-              backgroundColor={'linear-gradient(0deg, #E6D2E1 0%, #F7F4F1 100%)'}
-              maxWidth={'100%'}
-            />
-          </Styled.LastWidgetWrapper>
-        </Styled.SecondRow>
+        {isMobile ? (
+          <>
+            <Styled.FirstRow>
+              <Styled.FirstWidgetWrapper>
+                <WidgetAboutMyApproach text={FIRST_WIDGET} maxWidth={'100%'} />
+              </Styled.FirstWidgetWrapper>
+              <Styled.Iryna1 />
+            </Styled.FirstRow>
+
+            <Styled.SecondRow>
+              <Styled.Image4 />
+              <Styled.MixWidgetContainer>
+                <FirstText fontSize={24}>{MIX_WIDGET_TEXT}</FirstText>
+                <Styled.WidgetWrapper>
+                  <Widget
+                    text={'а на уважении к опыту, к процессу'}
+                    fontSize={24}
+                    padding={'10px 15px'}
+                    maxWidth={'fit-content'}
+                  />
+                  <Widget
+                    text={'и к реальности бизнеса.'}
+                    fontSize={24}
+                    padding={'10px 15px'}
+                    backgroundColor={'--primary-color-medium-rose'}
+                    maxWidth={'fit-content'}
+                  />
+                </Styled.WidgetWrapper>
+              </Styled.MixWidgetContainer>
+            </Styled.SecondRow>
+
+            <Styled.ThirdRow>
+              <Styled.SecondWidgetWrapper>
+                <WidgetAboutMyApproach
+                  text={SECOND_WIDGET}
+                  fontSize={24}
+                  backgroundColor={'--primary-color-super-light-beige'}
+                  maxWidth={'100%'}
+                />
+              </Styled.SecondWidgetWrapper>
+              <Styled.LastWidgetWrapper>
+                <WidgetAboutMyApproach
+                  text={LAST_WIDGET}
+                  fontSize={24}
+                  backgroundColor={'linear-gradient(0deg, #E6D2E1 0%, #F7F4F1 100%)'}
+                  maxWidth={'100%'}
+                />
+              </Styled.LastWidgetWrapper>
+            </Styled.ThirdRow>
+          </>
+        ) : (
+          <>
+            <Styled.FirstRow>
+              <Styled.FirstWidgetWrapper>
+                <WidgetAboutMyApproach text={FIRST_WIDGET} maxWidth={'100%'} />
+              </Styled.FirstWidgetWrapper>
+              <Styled.Iryna1 />
+              <Styled.MixWidgetContainer>
+                <FirstText fontSize={24}>{MIX_WIDGET_TEXT}</FirstText>
+                <Styled.WidgetWrapper>
+                  <Widget
+                    text={'а на уважении к опыту, к процессу'}
+                    fontSize={24}
+                    padding={'10px 15px'}
+                    maxWidth={'fit-content'}
+                  />
+                  <Widget
+                    text={'и к реальности бизнеса.'}
+                    fontSize={24}
+                    padding={'10px 15px'}
+                    backgroundColor={'--primary-color-medium-rose'}
+                    maxWidth={'fit-content'}
+                  />
+                </Styled.WidgetWrapper>
+              </Styled.MixWidgetContainer>
+            </Styled.FirstRow>
+
+            <Styled.SecondRow>
+              <Styled.Image4 />
+              <Styled.SecondWidgetWrapper>
+                <WidgetAboutMyApproach
+                  text={SECOND_WIDGET}
+                  fontSize={24}
+                  backgroundColor={'--primary-color-super-light-beige'}
+                  maxWidth={'100%'}
+                />
+              </Styled.SecondWidgetWrapper>
+              <Styled.LastWidgetWrapper>
+                <WidgetAboutMyApproach
+                  text={LAST_WIDGET}
+                  fontSize={24}
+                  backgroundColor={'linear-gradient(0deg, #E6D2E1 0%, #F7F4F1 100%)'}
+                  maxWidth={'100%'}
+                />
+              </Styled.LastWidgetWrapper>
+            </Styled.SecondRow>
+          </>
+        )}
       </Styled.ContentWrapper>
     </Styled.Container>
   );

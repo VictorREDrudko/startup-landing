@@ -128,6 +128,20 @@ export const BigText = styled.p<TextProps>`
   }
 `;
 
+export const FirstText = styled.p<TextProps>`
+  ${GenericText}
+  font-size: 24px;
+  line-height: 1.3;
+
+  @media (max-width: 1125px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+`;
+
 export const MainText = styled.p<TextProps>`
   ${GenericText}
   font-size: 22px;

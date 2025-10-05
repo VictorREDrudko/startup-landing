@@ -7,7 +7,7 @@ interface WidgetContainerProps {
 }
 
 export const WidgetContainer = styled.div<WidgetContainerProps>`
-  padding: ${(p) => p.$padding || '15px 20px'};
+  padding: 40px;
   border-radius: 10px;
   background: ${(p) => {
     if (p.$backgroundColor) {
@@ -28,6 +28,14 @@ export const WidgetContainer = styled.div<WidgetContainerProps>`
   `}
   display: inline-block;
   word-wrap: break-word;
+
+  @media (max-width: 1150px) {
+    padding: 35px;
+  }
+
+  @media (max-width: 490px) {
+    padding: 25px;
+  }
 `;
 
 export const Styled = {
