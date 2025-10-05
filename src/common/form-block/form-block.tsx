@@ -7,6 +7,7 @@ import { Link } from '../../components/link';
 import { RadioButton } from '../../components/radio-button';
 import { H2, Text, TinyText } from '../../components/text';
 import { Textarea } from '../../components/text-area';
+import { navigateTo } from '../../utils';
 import { Styled } from './styled';
 
 const HEADER_TEXT = 'Хочу обсудить задачу';
@@ -80,8 +81,7 @@ export const FormBlock: React.FC = () => {
   };
 
   const handlePrivacyPolicyClick = () => {
-    // логика открытия политики конфиденциальности
-    console.log('Open privacy policy');
+    navigateTo('/privacy-policy', true);
   };
 
   // Валидационные правила
