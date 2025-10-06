@@ -14,7 +14,9 @@ import { PrivacyPolicyPage } from './common/privacy-policy-page';
 import { QuoteBlock } from './common/quote-block';
 import { TrainingBlock } from './common/training-block';
 import { WhatAmIDoing } from './common/what-am-I-doing';
+import { POLICY_PAGE_URL } from './constants';
 import { GlobalStyles } from './global-styles';
+import { usePendingScroll } from './hooks';
 
 const TITLE1 = 'БИЗНЕС С ЧЕЛОВЕЧЕСКИМ ЛИЦОМ';
 const QUOTE_TEXT1 = 'Когда в центре — не контроль, а смыслы.';
@@ -25,6 +27,8 @@ const QUOTE_TEXT3 = 'Всегда начинается с понимания к�
 const QUOTE_TEXT4 = 'Не «внедрение», а выстраивание вместе с вами.';
 
 function MainPage() {
+  usePendingScroll();
+
   return (
     <>
       <Header />
@@ -50,8 +54,8 @@ function App() {
     <Router>
       <GlobalStyles />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path={'/'}element={<MainPage />} />
+        <Route path={`/${POLICY_PAGE_URL}`} element={<PrivacyPolicyPage />} />
       </Routes>
     </Router>
   );

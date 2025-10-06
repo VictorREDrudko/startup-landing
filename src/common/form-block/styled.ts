@@ -13,7 +13,7 @@ export const Container = styled.div`
   padding: 50px 20px;
   box-sizing: border-box;
 
-  @media (max-width: 390px) {
+  @media (max-width: 391px) {
     padding: 47px 20px;
   }
 `;
@@ -44,10 +44,20 @@ export const Inputs = styled.div`
   grid-template-rows: 45px 45px;
   row-gap: 20px;
   column-gap: 12px;
+
+  @media (max-width: 391px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+  }
 `;
 
 export const LabelFormWrapper = styled.div`
-  margin-top: 8px;
+  margin-top: 15px;
+
+  @media (max-width: 391px) {
+    margin-top: 0;
+  }
 `;
 
 export const Massagers = styled.div`
@@ -73,9 +83,23 @@ export const InputMassage = styled.div`
 
   ${TinyText} {
     font-size: 12px;
+
+    @media (max-width: 391px) {
+      font-size: 13px;
+    }
   }
   ${ScrollLink} {
     text-decoration: underline;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+
+    @media (max-width: 391px) {
+      font-size: 13px;
+      display: block;
+      white-space: pre-line;
+    }
   } 
 `;
 

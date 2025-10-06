@@ -7,6 +7,7 @@ import { Link } from '../../components/link';
 import { RadioButton } from '../../components/radio-button';
 import { H2, Text, TinyText } from '../../components/text';
 import { Textarea } from '../../components/text-area';
+import { POLICY_PAGE_URL } from '../../constants';
 import { Styled } from './styled';
 
 const HEADER_TEXT = 'Хочу обсудить задачу';
@@ -82,7 +83,7 @@ export const FormBlock: React.FC = () => {
   const handlePrivacyPolicyClick = () => {
     const currentUrl = window.location.href;
     const baseUrl = currentUrl.split('#')[0];
-    window.open(`${baseUrl}#/privacy-policy`, '_blank');
+    window.open(`${baseUrl}#/${POLICY_PAGE_URL}`, '_blank');
   };
 
   // Валидационные правила
@@ -192,7 +193,7 @@ export const FormBlock: React.FC = () => {
             {TEXT_AREA_LABEL_PART1}
             <Link
               text={TEXT_AREA_LABEL_PART2}
-              targetId="privacy-policy"
+              targetId={POLICY_PAGE_URL}
               onClick={handlePrivacyPolicyClick}
             />
           </TinyText>
