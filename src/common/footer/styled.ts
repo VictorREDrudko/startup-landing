@@ -52,7 +52,8 @@ export const Content = styled.div`
 `;
 
 export const Links = styled.div`
-  display: flex;
+  /* display: flex; вернуть как будут ссылки на TG */
+  display: none;
   align-items: center;
   gap: 124px;
 

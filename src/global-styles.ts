@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     --primary-color-20: #e6eef7;
     --primary-color-10: #f0f5fa;
     --primary-color-button: #87a9d0;
+    --primary-color-deep-blue-button: #5c84b2;
     --primary-color-text-grey: #2d2d2d;
     --primary-color-super-light-rose: #ebe1e5;
     --primary-color-light-rose: #e6d2e1;

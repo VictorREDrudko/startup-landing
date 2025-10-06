@@ -22,28 +22,36 @@ function getButtonStyles({ disabled, $isTransparent }: ButtonStylesSettings) {
       &:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(135, 169, 208, 0.2);
+        transition: all 0.5s ease;
+        color: #FFFFFF;
+        background-color: var(--primary-color-button);
       }
       
       &:active {
         transform: translateY(-2px) scale(0.98);
         box-shadow: 0 2px 6px rgba(135, 169, 208, 0.3);
         transition: all 0.1s ease;
+        color: #FFFFFF;
+        background-color: var(--primary-color-button);
       }
     `;
   } else {
     return css`
-      background-color: var(--primary-color-button);
+      background-color: var(--primary-color-deep-blue-button);
       color: #FFFFFF;
       
       &:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(135, 169, 208, 0.3);
+        background-color: var(--primary-color-button);
+        transition: all 0.3s ease;
       }
       
       &:active {
         transform: translateY(-2px) scale(0.98);
         box-shadow: 0 2px 6px rgba(135, 169, 208, 0.4);
         transition: all 0.1s ease;
+        background-color: var(--primary-color-button);
       }
     `;
   }
@@ -66,6 +74,11 @@ const StyledButton = styled.button<ButtonStylesSettings>`
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  font-weight: 400;
   transform: translateY(0) scale(1);
 
   ${p => getButtonStyles(p)}

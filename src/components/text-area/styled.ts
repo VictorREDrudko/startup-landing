@@ -20,7 +20,11 @@ const Textarea = styled.textarea<{ $hasError?: boolean }>`
 
   &::placeholder {
     color: #A3A3A3;
+    font-family: 'Playfair Display', serif;
     font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2;
+    font-weight: 400;
   }
 
   &:focus {
@@ -33,9 +37,10 @@ const Textarea = styled.textarea<{ $hasError?: boolean }>`
     border-color: var(--primary-color-60);
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 391px) {
     &::placeholder {
       font-size: 16px;
+      max-width: 165px;
     }
   }
 `;

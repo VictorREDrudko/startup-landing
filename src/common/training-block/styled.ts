@@ -8,6 +8,10 @@ interface TrainingProps {
   $background: string;
 }
 
+interface DescriptionEndProps {
+  $offset?: number;
+}
+
 
 export const Container = styled.div`
   display: flex;
@@ -83,12 +87,12 @@ export const Description = styled.div`
   margin-bottom: 25px;
 `;
 
-export const DescriptionEnd = styled.div`
+export const DescriptionEnd = styled.div<DescriptionEndProps>`
   display: flex;
   flex-direction: column;
   gap: 25px;
   width: 100%;
-  margin-bottom: 45px;
+  margin-bottom: ${props => props.$offset ? `${45 - props.$offset}px` : '45px'};
   height: 100%;
   justify-content: flex-end;
 `;

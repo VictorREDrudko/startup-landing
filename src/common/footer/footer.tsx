@@ -3,7 +3,7 @@ import React from 'react';
 import facebookIcon from '../../assets/icons/facebook.svg';
 import instagramIcon from '../../assets/icons/instagram.svg';
 import telegramIcon from '../../assets/icons/telegram.svg';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.svg';
 import { IconLink } from '../../components/icon-link';
 import { Link } from '../../components/link';
 import { Styled } from './styled';

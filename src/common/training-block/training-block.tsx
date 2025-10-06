@@ -59,7 +59,7 @@ export const TrainingBlock: React.FC = () => {
             padding={'6px 20px'}
             backgroundColor={'--primary-color-super-light-rose'}
           />
-          <Styled.DescriptionEnd>
+          <Styled.DescriptionEnd $offset={25}>
             <Text fontSize={18}>{TRAINING_DESCRIPTION_1}</Text>
             <Text fontSize={18}>{formatTextWithBoldStart(TRAINING_FORMAT_1)}</Text>
           </Styled.DescriptionEnd>
