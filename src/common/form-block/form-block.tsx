@@ -56,16 +56,16 @@ export const FormBlock: React.FC = () => {
   });
 
   const watchedValues = watch();
-  
+
   // Проверяем, можно ли активировать кнопку отправки
-  const isSubmitDisabled = !watchedValues.name || 
+  const isSubmitDisabled = !watchedValues.name ||
     (!watchedValues.email && !watchedValues.phone && !watchedValues.telegram) ||
     isSubmitting;
 
   const onSubmit = async (data: FormData) => {
     try {
       const response = await sendEmailWithFormSubmit(data);
-      
+
       if (response.ok) {
         alert('Сообщение отправлено! Я свяжусь с вами в ближайшее время.');
         reset();
@@ -100,7 +100,7 @@ export const FormBlock: React.FC = () => {
   };
 
   return (
-    <Styled.Container>
+    <Styled.Container id="contacts">
       <Styled.Form as="form" onSubmit={handleSubmit(onSubmit)}>
         <H2>{HEADER_TEXT}</H2>
         <Text
@@ -197,7 +197,7 @@ export const FormBlock: React.FC = () => {
             letterSpacing={0}
           >
             {TEXT_AREA_LABEL_PART1}
-            <Link 
+            <Link
               text={TEXT_AREA_LABEL_PART2}
               targetId="privacy-policy"
               onClick={handlePrivacyPolicyClick}

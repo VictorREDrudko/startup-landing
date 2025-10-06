@@ -18,7 +18,7 @@ const text = {
 
 export const AboutBlock: React.FC = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id='about'>
       <H2 lineHeight={1.1}>{TITLE}</H2>
       <Styled.Content>
         <Styled.Block1Wrapper>

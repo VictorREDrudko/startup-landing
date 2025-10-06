@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '../../components/button';
 import { H2, H4, Text } from '../../components/text';
 import { Widget } from '../../components/widget';
-import { formatTextWithBoldStart } from '../../utils';
+import { formatTextWithBoldStart, handleNavigation } from '../../utils';
 import { Styled } from './styled';
 
 const HEADER_TEXT = 'Мои услуги';
@@ -47,7 +47,7 @@ const SERVICE_EXIT_4 = `На выходе: короткий документ с 
 
 export const MyServicesBlock: React.FC = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="services">
       <H2>{HEADER_TEXT}</H2>
       <Styled.ServiceWrapper>
         <Styled.Service>
@@ -70,6 +70,7 @@ export const MyServicesBlock: React.FC = () => {
             <Button
               text={SERVICE_BUTTON_TEXT}
               isTransparent={true}
+              onClick={() => handleNavigation('contacts')}
             />
           </Styled.ServiceContent>
         </Styled.Service>
@@ -93,6 +94,7 @@ export const MyServicesBlock: React.FC = () => {
             <Button
               text={SERVICE_BUTTON_TEXT}
               isTransparent={true}
+              onClick={() => handleNavigation('contacts')}
             />
           </Styled.ServiceContent>
         </Styled.Service>
@@ -116,6 +118,7 @@ export const MyServicesBlock: React.FC = () => {
             <Button
               text={SERVICE_BUTTON_TEXT}
               isTransparent={true}
+              onClick={() => handleNavigation('contacts')}
             />
           </Styled.ServiceContent>
         </Styled.Service>
@@ -139,6 +142,7 @@ export const MyServicesBlock: React.FC = () => {
             <Button
               text={SERVICE_BUTTON_TEXT}
               isTransparent={true}
+              onClick={() => handleNavigation('contacts')}
             />
           </Styled.ServiceContent>
         </Styled.Service>

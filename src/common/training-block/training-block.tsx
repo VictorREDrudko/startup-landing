@@ -1,6 +1,5 @@
 import React from 'react';
 
-import gradient from '../../assets/for-the-training-block/gradient.png';
 import essential_1 from '../../assets/for-the-training-block/office-desk-essentials-1.png';
 import essential_2 from '../../assets/for-the-training-block/office-desk-essentials-2.png';
 import essential_3 from '../../assets/for-the-training-block/office-desk-essentials-3.png';
@@ -48,8 +47,7 @@ export const TrainingBlock: React.FC = () => {
     <Styled.Container>
       <H2>{HEADER_TEXT}</H2>
       <Styled.TrainingWrapper>
-        <Styled.Training 
-          $gradient={gradient} 
+        <Styled.Training
           $background={essential_1}
         >
           <H5 fontWeight={400}>{TRAINING_HEADER_TEXT_1}</H5>
@@ -67,8 +65,7 @@ export const TrainingBlock: React.FC = () => {
           </Styled.DescriptionEnd>
           <ExternalLink url={TRAINING_URL_1} />
         </Styled.Training>
-        <Styled.Training 
-          $gradient={gradient} 
+        <Styled.Training
           $background={essential_2}
         >
           <H5 fontWeight={400}>{TRAINING_HEADER_TEXT_2}</H5>
@@ -86,8 +83,7 @@ export const TrainingBlock: React.FC = () => {
           </Styled.DescriptionEnd>
           <ExternalLink url={TRAINING_URL_2} />
         </Styled.Training>
-        <Styled.Training 
-          $gradient={gradient} 
+        <Styled.Training
           $background={essential_3}
         >
           <H5 fontWeight={400}>{TRAINING_HEADER_TEXT_3}</H5>
@@ -105,8 +101,7 @@ export const TrainingBlock: React.FC = () => {
           </Styled.DescriptionEnd>
           <ExternalLink url={TRAINING_URL_3} />
         </Styled.Training>
-        <Styled.Training 
-          $gradient={gradient} 
+        <Styled.Training
           $background={essential_4}
         >
           <H5 fontWeight={400}>{TRAINING_HEADER_TEXT_4}</H5>

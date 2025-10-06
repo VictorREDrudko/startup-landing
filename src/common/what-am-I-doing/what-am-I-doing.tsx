@@ -25,7 +25,7 @@ export const WhatAmIDoing: React.FC = () => {
     );
   });
   return (
-    <Styled.Container>
+    <Styled.Container id='myWork'>
       <Styled.MePhotoWrapper>
         <Styled.Iryna/>
       </Styled.MePhotoWrapper>

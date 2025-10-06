@@ -5,7 +5,6 @@ import { WidgetStyled } from '../../components/widget';
 
 
 interface TrainingProps {
-  $gradient: string;
   $background: string;
 }
 
@@ -53,7 +52,7 @@ export const Training = styled.div<TrainingProps>`
   flex-direction: column;
   border-radius: 10px;
   padding: 25px 22px 34px;
-  background-image: ${props => `url(${props.$gradient}), url(${props.$background})`};
+  background-image: ${props => `url(${props.$background})`};
   background-size: cover, cover;
   background-position: center bottom, center center;
   background-repeat: no-repeat;

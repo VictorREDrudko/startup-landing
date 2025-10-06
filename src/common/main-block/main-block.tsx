@@ -3,6 +3,7 @@ import React from 'react';
 import mainImage from '../../assets/photo/main.png';
 import { Button } from '../../components/button';
 import { BigText, H1, MainText } from '../../components/text';
+import { handleNavigation } from '../../utils';
 import { Styled } from './styled';
 
 const TEXTS = {
@@ -20,16 +21,16 @@ export const MainBlock: React.FC = () => {
       <Styled.Content>
         <H1>{TEXTS.title}</H1>
         <Styled.TextWrapper>
-          <BigText>
-            {TEXTS.subtitle}
-          </BigText>
-          <MainText>
-            {TEXTS.description}
-          </MainText>
+          <BigText>{TEXTS.subtitle}</BigText>
+          <MainText>{TEXTS.description}</MainText>
         </Styled.TextWrapper>
         <Styled.Buttons>
-          <Button text={TEXTS.button1} isTransparent={true} />
-          <Button text={TEXTS.button2} />
+          <Button
+            text={TEXTS.button1}
+            isTransparent={true}
+            onClick={() => handleNavigation('myWork')}
+          />
+          <Button text={TEXTS.button2} onClick={() => handleNavigation('contacts')} />
         </Styled.Buttons>
       </Styled.Content>
       <Styled.ImageContainer>

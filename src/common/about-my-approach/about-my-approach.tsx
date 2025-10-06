@@ -33,7 +33,7 @@ export const AboutMyApproachBlock: React.FC = () => {
   }, []);
 
   return (
-    <Styled.Container>
+    <Styled.Container id={'approach'}>
       <H2>{HEADER_TEXT}</H2>
       <Styled.ContentWrapper>
         {isMobile ? (
