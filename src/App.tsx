@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { AboutBlock } from './common/about-block';
 import { AboutMyApproachBlock } from './common/about-my-approach';
@@ -38,7 +38,7 @@ function MainPage() {
       <JobStructureBlock />
       <QuoteBlock title={TITLE2} text1={QUOTE_TEXT3} text2={QUOTE_TEXT4} />
       <MyIdeaBlock />
-      <AboutBlock/>
+      <AboutBlock />
       <FormBlock />
       <Footer />
     </>
