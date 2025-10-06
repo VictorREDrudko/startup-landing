@@ -10,6 +10,8 @@ export const handleNavigation = (targetId: string) => {
       // Получаем базовый путь из окружения или используем по умолчанию
       const basename = import.meta.env.BASE_URL || '/startup-landing/';
 
+      alert(import.meta.env.BASE_URL);
+
       // Обновление URL с якорем и базовым путем
       window.history.pushState(null, '', `${basename}#${targetId}`);
     }
