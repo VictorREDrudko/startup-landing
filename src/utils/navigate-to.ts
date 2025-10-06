@@ -1,5 +1,7 @@
+import { MAIN_PAGE_URL } from '../constants';
+
 export const getBasePath = (): string => {
-  return window.location.pathname.includes('/startup-landing/') ? '/startup-landing' : '';
+  return window.location.pathname.includes(`/${MAIN_PAGE_URL}/`) ? `/${MAIN_PAGE_URL}` : '';
 };
 
 export const navigateTo = (path: string, newTab: boolean = false) => {

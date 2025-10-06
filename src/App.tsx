@@ -14,6 +14,7 @@ import { PrivacyPolicyPage } from './common/privacy-policy-page';
 import { QuoteBlock } from './common/quote-block';
 import { TrainingBlock } from './common/training-block';
 import { WhatAmIDoing } from './common/what-am-I-doing';
+import { POLICY_PAGE_URL } from './constants';
 import { GlobalStyles } from './global-styles';
 import { usePendingScroll } from './hooks';
 
@@ -53,8 +54,8 @@ function App() {
     <Router>
       <GlobalStyles />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path={'/'}element={<MainPage />} />
+        <Route path={`/${POLICY_PAGE_URL}`} element={<PrivacyPolicyPage />} />
       </Routes>
     </Router>
   );
