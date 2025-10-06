@@ -1,0 +1,2 @@
+export { AboutBlock } from './aboutBlock';
+

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import { AboutBlock } from './common/about-block';
 import { AboutMyApproachBlock } from './common/about-my-approach';
 import { Footer } from './common/footer';
 import { ForWhomBlock } from './common/for-whom-block';
@@ -37,6 +38,7 @@ function MainPage() {
       <JobStructureBlock />
       <QuoteBlock title={TITLE2} text1={QUOTE_TEXT3} text2={QUOTE_TEXT4} />
       <MyIdeaBlock />
+      <AboutBlock/>
       <FormBlock />
       <Footer />
     </>
