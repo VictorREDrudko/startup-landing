@@ -6,14 +6,15 @@ import telegramIcon from '../../assets/icons/telegram.svg';
 import logo from '../../assets/logo.png';
 import { IconLink } from '../../components/icon-link';
 import { Link } from '../../components/link';
-import { navigateTo } from '../../utils';
 import { Styled } from './styled';
 
 const LINK_TEXT = 'Политика обработки персональных данных';
 
 export const Footer: React.FC = () => {
   const handlePrivacyPolicyClick = () => {
-    navigateTo('/privacy-policy', true);
+    const currentUrl = window.location.href;
+    const baseUrl = currentUrl.split('#')[0];
+    window.open(`${baseUrl}#/privacy-policy`, '_blank');
   };
 
   return (
@@ -22,28 +23,14 @@ export const Footer: React.FC = () => {
         <Styled.Logo src={logo} alt="Логотип" />
         <Styled.Links>
           <Styled.LinksWrapper>
-            <IconLink 
-              icon={facebookIcon} 
-              url="https://facebook.com/******" 
-            />
-            <IconLink 
-              icon={instagramIcon} 
-              url="https://instagram.com/*****" 
-            />
+            <IconLink icon={facebookIcon} url="https://facebook.com/******" />
+            <IconLink icon={instagramIcon} url="https://instagram.com/*****" />
           </Styled.LinksWrapper>
           <Styled.LinksWithTextWrapper>
-            <IconLink 
-              icon={telegramIcon} 
-              text="telegram"
-              url="https://t.me/****" 
-            />
+            <IconLink icon={telegramIcon} text="telegram" url="https://t.me/****" />
           </Styled.LinksWithTextWrapper>
         </Styled.Links>
-        <Link 
-          text={LINK_TEXT} 
-          targetId={'privacy-policy'}
-          onClick={handlePrivacyPolicyClick}
-        />
+        <Link text={LINK_TEXT} targetId={'privacy-policy'} onClick={handlePrivacyPolicyClick} />
       </Styled.Content>
     </Styled.Container>
   );

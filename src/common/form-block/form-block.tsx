@@ -1,5 +1,5 @@
 import React from 'react';
-import { Controller,useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
 import { Button } from '../../components/button';
 import { Input } from '../../components/input';
@@ -7,7 +7,6 @@ import { Link } from '../../components/link';
 import { RadioButton } from '../../components/radio-button';
 import { H2, Text, TinyText } from '../../components/text';
 import { Textarea } from '../../components/text-area';
-import { navigateTo } from '../../utils';
 import { Styled } from './styled';
 
 const HEADER_TEXT = 'Хочу обсудить задачу';
@@ -33,7 +32,7 @@ const sendEmailWithFormSubmit = async (data: FormData) => {
   formData.append('Telegram', data.telegram || 'не указал');
   formData.append('Телефон', data.phone || 'не указал');
   formData.append('E-mail', data.email || 'не указал');
-  formData.append('Метод для контакта', data.contactMethod  || 'не указал');
+  formData.append('Метод для контакта', data.contactMethod || 'не указал');
   formData.append('Сообщение', data.message);
 
   // Бесплатно - вроде до 1000 отправок в месяц
@@ -58,7 +57,8 @@ export const FormBlock: React.FC = () => {
   const watchedValues = watch();
 
   // Проверяем, можно ли активировать кнопку отправки
-  const isSubmitDisabled = !watchedValues.name ||
+  const isSubmitDisabled =
+    !watchedValues.name ||
     (!watchedValues.email && !watchedValues.phone && !watchedValues.telegram) ||
     isSubmitting;
 
@@ -72,16 +72,17 @@ export const FormBlock: React.FC = () => {
       } else {
         throw new Error('Ошибка отправки');
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       alert(`Произошла ошибка при отправке сообщения.
-        Пожалуйста, попробуйте еще раз или свяжитесь другим способом.`,
-      );
+        Пожалуйста, попробуйте еще раз или свяжитесь другим способом.`);
     }
   };
 
   const handlePrivacyPolicyClick = () => {
-    navigateTo('/privacy-policy', true);
+    const currentUrl = window.location.href;
+    const baseUrl = currentUrl.split('#')[0];
+    window.open(`${baseUrl}#/privacy-policy`, '_blank');
   };
 
   // Валидационные правила
@@ -103,11 +104,7 @@ export const FormBlock: React.FC = () => {
     <Styled.Container id="contacts">
       <Styled.Form as="form" onSubmit={handleSubmit(onSubmit)}>
         <H2>{HEADER_TEXT}</H2>
-        <Text
-          fontSize={18}
-          letterSpacing={0.2}
-          lineHeight={1.2}
-        >
+        <Text fontSize={18} letterSpacing={0.2} lineHeight={1.2}>
           {DESCRIPTION}
         </Text>
         <Styled.DataFields>
@@ -191,11 +188,7 @@ export const FormBlock: React.FC = () => {
             error={errors.message?.message}
             rows={4}
           />
-          <TinyText
-            fontSize={12}
-            lineHeight={1.3}
-            letterSpacing={0}
-          >
+          <TinyText fontSize={12} lineHeight={1.3} letterSpacing={0}>
             {TEXT_AREA_LABEL_PART1}
             <Link
               text={TEXT_AREA_LABEL_PART2}

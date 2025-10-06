@@ -46,11 +46,8 @@ function MainPage() {
 }
 
 function App() {
-  // Базовый путь для GitHub Pages
-  const basename = import.meta.env.BASE_URL;
-
   return (
-    <Router basename={basename}>
+    <Router>
       <GlobalStyles />
       <Routes>
         <Route path="/" element={<MainPage />} />
