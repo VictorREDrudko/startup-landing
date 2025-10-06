@@ -73,6 +73,7 @@ export const H2 = styled.h2<TextProps>`
   font-size: 45px;
   line-height: 1.1;
   font-weight: 400;
+  font-variant-numeric: lining-nums;
 
   @media (max-width: 780px) {
     font-size: 34px;

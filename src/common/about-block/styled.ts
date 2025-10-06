@@ -10,11 +10,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 70px;
-  padding: 50px 95px;
-  /* border: 1px solid red; */
-
+  padding: 50px 90px;
   background-image: url(${backgroundAbout});
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,7 +52,7 @@ export const Content = styled.div`
 export const Block1Wrapper = styled.div`
   padding: 30px 25px;
   display: flex;
-  max-width: 270px;
+  max-width: 250px;
   width: 100%;
   min-height: 160px;
   background-color: var(--primary-color-super-light-beige);
@@ -147,11 +144,16 @@ export const Block3Wrapper = styled.div`
 export const Block4Wrapper = styled.div`
   padding: 30px 25px;
   display: flex;
-  max-width: 325px;
+  max-width: 327px;
   width: 100%;
   min-height: 225px;
   background-color: var(--primary-color-beige);
   border-radius: 10px;
+  white-space: pre-line;
+
+  > p {
+    white-space: pre-line;
+  }
 
   @media (max-width: 930px) {
     padding: 15px;
