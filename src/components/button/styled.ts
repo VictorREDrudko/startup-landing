@@ -74,7 +74,7 @@ const StyledButton = styled.button<ButtonStylesSettings>`
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto Condensed';
   font-size: 18px;
   line-height: 1.1;
   letter-spacing: 0;

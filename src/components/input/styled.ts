@@ -16,7 +16,7 @@ const Input = styled.input<{ $hasError?: boolean }>`
   
   &::placeholder {
     color: #A3A3A3;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Condensed';
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2;
