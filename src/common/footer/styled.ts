@@ -1,13 +1,26 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   min-height: 130px;
   width: 100%;
   padding: 41px 70px;
-  background: var(--primary-color-medium-rose);
+
+  /* Фон на всю ширину экрана */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background: var(--primary-color-medium-rose);
+    z-index: -1;
+  }
 
   @media (max-width: 1175px) {
     padding: 41px;
@@ -28,6 +41,7 @@ export const Content = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 107px;
+  /* width: 100%; */
 
   > a {
     max-width: 180px;

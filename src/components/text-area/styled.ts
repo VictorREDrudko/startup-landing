@@ -20,11 +20,12 @@ const Textarea = styled.textarea<{ $hasError?: boolean }>`
 
   &::placeholder {
     color: #A3A3A3;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Condensed';
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2;
     font-weight: 400;
+    max-width: 165px;
   }
 
   &:focus {
@@ -40,7 +41,6 @@ const Textarea = styled.textarea<{ $hasError?: boolean }>`
   @media (max-width: 391px) {
     &::placeholder {
       font-size: 16px;
-      max-width: 165px;
     }
   }
 `;
