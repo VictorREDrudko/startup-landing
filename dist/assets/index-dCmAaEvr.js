@@ -728,6 +728,8 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
   min-height: 130px;
   width: 100%;
   padding: 41px 70px;
+  overscroll-behavior-x: none;
+
 
   /* Фон на всю ширину экрана */
   &::before {
@@ -736,10 +738,12 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: var(--primary-color-medium-rose);
     z-index: -1;
+    overscroll-behavior-x: none;
+    overflow-x: hidden;
   }
 
   @media (max-width: 1175px) {
@@ -782,8 +786,7 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
     gap: 35px;
   }
 `,ab=H.div`
-  /* display: flex; вернуть как будут ссылки на TG */
-  display: none;
+  display: flex;
   align-items: center;
   gap: 124px;
 
@@ -819,7 +822,7 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
     width: 190px;
     height: 34px;
   }
-`,ql={Container:tb,Content:eb,Links:ab,LinksWrapper:nb,LinksWithTextWrapper:lb,Logo:ib},ub="Политика обработки персональных данных",cg=()=>{const l=()=>{const c=window.location.href.split("#")[0];window.open(`${c}#/${Pl}`,"_blank")};return p.jsx(ql.Container,{children:p.jsxs(ql.Content,{children:[p.jsx(ql.Logo,{src:ug,alt:"Логотип"}),p.jsxs(ql.Links,{children:[p.jsxs(ql.LinksWrapper,{children:[p.jsx(ks,{icon:Zv,url:"https://facebook.com/******"}),p.jsx(ks,{icon:Kv,url:"https://instagram.com/*****"})]}),p.jsx(ql.LinksWithTextWrapper,{children:p.jsx(ks,{icon:Wv,text:"telegram",url:"https://t.me/****"})})]}),p.jsx(Zl,{text:ub,targetId:Pl,onClick:l})]})})},rb="/startup-landing/assets/elegantnyi-fon-evkalipta-BTey4mXO.png",cb=H.div`
+`,ql={Container:tb,Content:eb,Links:ab,LinksWrapper:nb,LinksWithTextWrapper:lb,Logo:ib},ub="Политика обработки персональных данных",cg=()=>{const l=()=>{const c=window.location.href.split("#")[0];window.open(`${c}#/${Pl}`,"_blank")};return p.jsx(ql.Container,{children:p.jsxs(ql.Content,{children:[p.jsx(ql.Logo,{src:ug,alt:"Логотип"}),p.jsxs(ql.Links,{children:[p.jsxs(ql.LinksWrapper,{style:{display:"none"},children:[p.jsx(ks,{icon:Zv,url:"https://facebook.com/******"}),p.jsx(ks,{icon:Kv,url:"https://instagram.com/*****"})]}),p.jsx(ql.LinksWithTextWrapper,{children:p.jsx(ks,{icon:Wv,text:"telegram",url:"https://t.me/****"})})]}),p.jsx(Zl,{text:ub,targetId:Pl,onClick:l})]})})},rb="/startup-landing/assets/elegantnyi-fon-evkalipta-BTey4mXO.png",cb=H.div`
   max-width: 1440px;
   width: 100%;
   display: flex;

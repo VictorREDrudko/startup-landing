@@ -8,6 +8,8 @@ export const Container = styled.div`
   min-height: 130px;
   width: 100%;
   padding: 41px 70px;
+  overscroll-behavior-x: none;
+
 
   /* Фон на всю ширину экрана */
   &::before {
@@ -16,10 +18,12 @@ export const Container = styled.div`
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: var(--primary-color-medium-rose);
     z-index: -1;
+    overscroll-behavior-x: none;
+    overflow-x: hidden;
   }
 
   @media (max-width: 1175px) {
@@ -66,8 +70,7 @@ export const Content = styled.div`
 `;
 
 export const Links = styled.div`
-  /* display: flex; вернуть как будут ссылки на TG */
-  display: none;
+  display: flex;
   align-items: center;
   gap: 124px;
 

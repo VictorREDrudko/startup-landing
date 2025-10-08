@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
       <Styled.Content>
         <Styled.Logo src={logo} alt="Логотип" />
         <Styled.Links>
-          <Styled.LinksWrapper>
+          <Styled.LinksWrapper style={{ display: 'none' }}>
             <IconLink icon={facebookIcon} url="https://facebook.com/******" />
             <IconLink icon={instagramIcon} url="https://instagram.com/*****" />
           </Styled.LinksWrapper>
